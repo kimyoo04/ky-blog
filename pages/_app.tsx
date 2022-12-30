@@ -84,10 +84,6 @@ export default function App({Component, pageProps}: AppProps) {
         <link rel="manifest" href="./manifest.json" />
         <meta name="msapplication-TileColor" content="#ffffff" />
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
-        <link
-          href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
-          rel="stylesheet"
-        />
       </Head>
       <ThemeProvider attribute="class">
         <Component {...pageProps} />
