@@ -1,10 +1,9 @@
-import Hero from "@components/Hero/Hero";
 import MainLayout from "@components/Layouts/MainLayout";
 
-export default function Home() {
+export default function Contact() {
   return (
     <MainLayout>
-      <Hero />
+      <h1>Contact Me</h1>
     </MainLayout>
   );
 }
