@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import {motion} from "framer-motion";
 import {useState, useEffect} from "react";
-import {useAppDispatch, useAppSelector} from "@app/hook";
+import {useAppDispatch, useAppSelector} from "@src/toolkit/hook";
 import {alertActions} from "@features/alert/alertSlice";
 
 //--------------------------------------------------------------------------------

@@ -1,4 +1,4 @@
-import {useAppDispatch, useAppSelector} from "@app/hook";
+import {useAppDispatch, useAppSelector} from "@src/toolkit/hook";
 import {toggleTheme} from "@features/theme/themeSlice";
 import {motion} from "framer-motion";
 import styled from "@emotion/styled";

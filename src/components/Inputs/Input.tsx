@@ -1,4 +1,4 @@
-export default function Intro() {
+export default function Input() {
   return (
     <>
       <div></div>
