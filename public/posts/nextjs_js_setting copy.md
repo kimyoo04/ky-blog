@@ -2,6 +2,7 @@
 title: "NEXT JS 13 설정하기"
 date: "2023-01-28"
 category: "Nextjs"
+tags: "boilerplate code, 초기세팅, nextjs 13"
 ---
 
 # NEXT JS 13 설정하기
