@@ -28,6 +28,8 @@
       "@constants/*": ["./src/constants/*"],
       "@features": ["./src/features"],
       "@features/*": ["./src/features/*"],
+      "@layouts": ["./src/layouts"],
+      "@layouts/*": ["./src/layouts/*"],
       "@scenes": ["./src/scenes"],
       "@scenes/*": ["./src/scenes/*"],
       "@toolkit": ["./src/toolkit"],

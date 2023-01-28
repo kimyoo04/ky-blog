@@ -2,8 +2,8 @@ export default function Footer() {
   return (
     <footer className="body-font">
       <div>
-        <div className="container flex flex-col items-center px-5 py-6 mx-auto sm:flex-row">
-          <p className="mt-4 text-sm text-gray-500 sm:mt-0">
+        <div className="container gap-4 px-5 py-6 mx-auto col-center sm:flex-row">
+          <p className="text-sm text-gray-500 sm:mt-0">
             © 2023 Kim Yoo —
             <a
               href="https://github.com/kimyoo04/ky-blog"
@@ -14,7 +14,7 @@ export default function Footer() {
               @Github
             </a>
           </p>
-          <span className="inline-flex justify-center mt-4 sm:ml-auto sm:mt-0 sm:justify-start">
+          <span className="inline-flex justify-center sm:ml-auto sm:mt-0 sm:justify-start">
             <a className="text-gray-500">
               <svg
                 fill="currentColor"
