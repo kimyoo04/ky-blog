@@ -7,7 +7,7 @@ export default function Header() {
       <div className="container flex-wrap items-center gap-4 p-5 mx-auto col-center md:flex-row">
         <Logo />
         <nav className="flex flex-wrap items-center justify-center gap-5 text-base md:ml-auto">
-          <NavLink href={"/"} name={"Home"} />
+          <NavLink href={"/about"} name={"About"} />
           <NavLink href={"/projects"} name={"Projects"} />
           <NavLink href={"/blog"} name={"Blog"} />
           <NavLink href={"/contact"} name={"Contact"} />
