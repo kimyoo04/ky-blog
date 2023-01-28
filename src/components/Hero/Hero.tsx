@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Laptop from "@components/animations/Laptop";
 
 export default function Hero() {
   return (
@@ -29,9 +28,7 @@ export default function Hero() {
             </Link>
           </div>
         </div>
-        <div className="w-5/6 lg:max-w-lg lg:w-full md:w-1/2">
-          <Laptop />
-        </div>
+        <div className="w-5/6 lg:max-w-lg lg:w-full md:w-1/2"></div>
       </div>
     </section>
   );

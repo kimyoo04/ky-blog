@@ -24,21 +24,26 @@
     "paths": {
       "@components": ["./src/components"],
       "@components/*": ["./src/components/*"],
-      "@config": ["./src/config"],
-      "@config/*": ["./src/config/*"],
       "@constants": ["./src/constants"],
       "@constants/*": ["./src/constants/*"],
       "@features": ["./src/features"],
       "@features/*": ["./src/features/*"],
+      "@scenes": ["./src/scenes"],
+      "@scenes/*": ["./src/scenes/*"],
       "@toolkit": ["./src/toolkit"],
       "@toolkit/*": ["./src/toolkit/*"],
-      "@types": ["./src/types"],
-      "@types/*": ["./src/types/*"],
+      "@type": ["./src/type"],
+      "@type/*": ["./src/type/*"],
+      "@util": ["./util"],
+      "@util/*": ["./util/*"],
       "@src": ["./src"],
-      "@src/*": ["./src/*"],
-      "@": ["./"],
-      "@/*": ["./*"]
-    }
+      "@src/*": ["./src/*"]
+    },
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
   "include": [
     "next-env.d.ts",
@@ -47,7 +52,8 @@
     "styles/**/*",
     "public/**/*",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+    ".next/types/**/*.ts"
   ],
   "exclude": ["coverage", ".next", "dist", "out", "node_modules"]
 }
