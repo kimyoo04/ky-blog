@@ -36,8 +36,8 @@
       "@toolkit/*": ["./src/toolkit/*"],
       "@type": ["./src/type"],
       "@type/*": ["./src/type/*"],
-      "@util": ["./util"],
-      "@util/*": ["./util/*"],
+      "@util": ["./src/util"],
+      "@util/*": ["./src/util/*"],
       "@src": ["./src"],
       "@src/*": ["./src/*"]
     },

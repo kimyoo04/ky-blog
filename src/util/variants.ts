@@ -1,52 +1,233 @@
-export const fadeIn = (direction: string) => {
-  return {
-    hidden: {
-      y: direction === "up" ? 80 : direction === "down" ? -80 : 0,
-      opacity: 0,
-      x: direction === "left" ? 80 : direction === "right" ? -80 : 0,
+import { Tdelay, Tdirection, Tduration, Ttype } from "@type/variants";
+
+export const navVariants = {
+  hidden: {
+    opacity: 0,
+    y: -50,
+    transition: {
+      type: "spring",
+      stiffness: 300,
+      damping: 140,
     },
-    show: {
-      y: 0,
-      x: 0,
-      opacity: 1,
-      transition: {
-        type: "tween",
-        duration: 1.4,
-        ease: [0.25, 0.25, 0.25, 0.75],
-      },
+  },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      stiffness: 80,
+      delay: 1,
     },
-  };
+  },
 };
 
-export const pageVariants = {
-  initial: {
+export const slideIn = (
+  direction: Tdirection,
+  type: Ttype,
+  delay: Tdelay,
+  duration: Tduration
+) => ({
+  hidden: {
+    x: direction === "left" ? "-100%" : direction === "right" ? "100%" : 0,
+    y: direction === "up" ? "100%" : direction === "down" ? "100%" : 0,
+  },
+  show: {
+    x: 0,
+    y: 0,
+    transition: {
+      type,
+      delay,
+      duration,
+      ease: "easeOut",
+    },
+  },
+});
+
+export const staggerContainer: any = (staggerChildren, delayChildren) => ({
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren,
+      delayChildren,
+    },
+  },
+});
+
+export const textVariant = (delay: Tdelay) => ({
+  hidden: {
+    y: 50,
     opacity: 0,
   },
-  in: {
+  show: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: "spring",
+      duration: 1.25,
+      delay,
+    },
+  },
+});
+
+export const textContainer = {
+  hidden: {
+    opacity: 0,
+  },
+  show: (i = 1) => ({
+    opacity: 1,
+    transition: { staggerChildren: 0.1, delayChildren: i * 0.1 },
+  }),
+};
+
+export const textVariant2 = {
+  hidden: {
+    opacity: 0,
+    y: 20,
+  },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "tween",
+      ease: "easeIn",
+    },
+  },
+};
+
+export const fadeIn = (
+  direction: Tdirection,
+  type: Ttype,
+  delay: Tdelay,
+  duration: Tduration
+) => ({
+  hidden: {
+    x: direction === "left" ? 100 : direction === "right" ? -100 : 0,
+    y: direction === "up" ? 100 : direction === "down" ? -100 : 0,
+    opacity: 0,
+  },
+  show: {
+    x: 0,
+    y: 0,
+    opacity: 1,
+    transition: {
+      type,
+      delay,
+      duration,
+      ease: "easeOut",
+    },
+  },
+});
+
+export const planetVariants = (direction: Tdirection) => ({
+  hidden: {
+    x: direction === "left" ? "-100%" : "100%",
+    rotate: 120,
+  },
+  show: {
+    x: 0,
+    rotate: 0,
+    transition: {
+      type: "spring",
+      duration: 1.8,
+      delay: 0.5,
+    },
+  },
+});
+
+export const zoomIn = (delay: Tdelay, duration: Tduration) => ({
+  hidden: {
+    scale: 0,
+    opacity: 0,
+  },
+  show: {
+    scale: 1,
+    opacity: 1,
+    transition: {
+      type: "tween",
+      delay,
+      duration,
+      ease: "easeOut",
+    },
+  },
+});
+
+export const footerVariants = {
+  hidden: {
+    opacity: 0,
+    y: 50,
+    transition: {
+      type: "spring",
+      stiffness: 300,
+      damping: 140,
+    },
+  },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      stiffness: 80,
+      delay: 0.5,
+    },
+  },
+};
+
+export const scrollTo = {
+  Top: {
+    top: {
+      opacity: 0,
+    },
+    middle: {
+      opacity: 1,
+    },
+  },
+  bottom: {
+    ottom: {
+      opacity: 0,
+    },
+    middle: {
+      opacity: 1,
+    },
+  },
+};
+
+export const randomXFadeIn = {
+  off(randomInteger: number) {
+    return {
+      x: randomInteger * 2,
+      opacity: 0,
+    };
+  },
+  on() {
+    return {
+      x: 0,
+      opacity: 1,
+    };
+  },
+};
+
+export const OverlayVariant = {
+  on: {
+    opacity: 1,
+    backgroundColor: "rgba(0,0,0,0.8)",
+    zIndex: "10",
+  },
+  off: {
+    opacity: 0,
+    zIndex: "-1",
+  },
+};
+
+export const alertVariant = {
+  init: {
+    opacity: 0,
+    scale: 0.5,
+  },
+  open: {
     opacity: 1,
   },
-  out: {
+  exit: {
     opacity: 0,
+    scale: 0.5,
   },
-};
-
-export const slide = (isBack: boolean) => {
-  return {
-    invisible: {
-      x: isBack ? "-100vw" : "100vw",
-      opacity: 0,
-    },
-    visible: {
-      x: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.6,
-      },
-    },
-    exit: {
-      x: isBack ? "100vw" : "-100vw",
-      opacity: 0,
-      transition: {duration: 0.1},
-    },
-  };
 };
